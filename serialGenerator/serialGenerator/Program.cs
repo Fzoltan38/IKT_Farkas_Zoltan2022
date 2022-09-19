@@ -8,8 +8,13 @@ namespace serialGenerator
 {
     internal class Program
     {
+        static void kapcsolodas()
+        {
+            Connect c = new Connect();
+        }
         static void Main(string[] args)
         {
+            kapcsolodas();
         }
     }
 }
