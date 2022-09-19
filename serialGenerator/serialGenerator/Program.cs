@@ -8,13 +8,19 @@ namespace serialGenerator
 {
     internal class Program
     {
-        static void kapcsolodas()
+        static void adatbazisMuveltek()
         {
             Connect c = new Connect();
+            c.querySelect();
+
         }
+
+       
         static void Main(string[] args)
         {
-            kapcsolodas();
+            adatbazisMuveltek();
+
+
         }
     }
 }
