@@ -61,6 +61,22 @@ namespace serialGenerator
 
             datareaderSelect.Close();
 
+        }
+
+        public void queryDelete(int id)
+        {
+            try
+            {
+                string qry = "DELETE FROM `serials` WHERE `id`=" + id;
+                MySqlCommand cmd = new MySqlCommand(qry, connection);
+                MySqlDataReader datareaderDelete = cmd.ExecuteReader();
+                datareaderDelete.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+          
 
         }
     }

@@ -8,9 +8,26 @@ namespace serialGenerator
 {
     internal class Program
     {
+
         static void adatbazisMuveltek()
         {
+            int id;
+
             Connect c = new Connect();
+            c.querySelect();
+            try
+            {
+                Console.Write("Válassz id-t amit törölni akarsz: ");
+                id = int.Parse(Console.ReadLine());
+                c.queryDelete(id);
+            }
+            catch (Exception e)
+            {
+
+                Console.WriteLine(e.Message);
+            }
+            
+
             c.querySelect();
 
         }
