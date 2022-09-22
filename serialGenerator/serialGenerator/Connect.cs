@@ -67,7 +67,7 @@ namespace serialGenerator
         {
             try
             {
-                string qry = "DELETE FROM `serials` WHERE `id`=" + id;
+                string qry = "DELETE FROM `serial` WHERE `id`=" + id;
                 MySqlCommand cmd = new MySqlCommand(qry, connection);
                 MySqlDataReader datareaderDelete = cmd.ExecuteReader();
                 datareaderDelete.Close();

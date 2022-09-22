@@ -29,3 +29,4 @@ C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenerator\serialGenerator\obj\D
 C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenerator\serialGenerator\obj\Debug\serialGenerator.csproj.CopyComplete
 C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenerator\serialGenerator\obj\Debug\serialGenerator.exe
 C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenerator\serialGenerator\obj\Debug\serialGenerator.pdb
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenerator\serialGenerator\obj\Debug\serialGenerator.csproj.SuggestedBindingRedirects.cache

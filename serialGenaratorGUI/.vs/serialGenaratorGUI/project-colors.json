@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "8c07922a-388a-4c50-a758-2c078caa58da": {
+      "ProjectGuid": "8c07922a-388a-4c50-a758-2c078caa58da",
+      "DisplayName": "serialGenaratorGUI",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
