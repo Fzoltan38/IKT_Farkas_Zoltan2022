@@ -1,17 +1,13 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace serialGenerator
+namespace serialGenaratorGUI
 {
     class Connect
     {
-        public MySqlConnection connection;
+        public static MySqlConnection connection;
         
         string db;
         string srv;
@@ -20,7 +16,7 @@ namespace serialGenerator
 
         string connectionstring;
 
-        public Connect()
+        public Connect(TextBox textboxForm1)
         {
             srv = "localhost";
             db = "serials";
@@ -35,7 +31,7 @@ namespace serialGenerator
             try
             {
                 connection.Open();
-                MessageBox.Show("Sikeres csatlakozás!");
+                textboxForm1.Text = "Sikeres csatlakozás!";
             
             }
             catch (Exception e)
