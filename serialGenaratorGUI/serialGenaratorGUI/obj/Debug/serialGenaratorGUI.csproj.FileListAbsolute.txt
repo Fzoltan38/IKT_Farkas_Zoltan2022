@@ -2,7 +2,6 @@ C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI
 C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\serialGenaratorGUI.exe
 C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\serialGenaratorGUI.pdb
 C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\obj\Debug\serialGenaratorGUI.csproj.AssemblyReference.cache
-C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\obj\Debug\serialGenaratorGUI.csproj.SuggestedBindingRedirects.cache
 C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\obj\Debug\serialGenaratorGUI.Form1.resources
 C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\obj\Debug\serialGenaratorGUI.Properties.Resources.resources
 C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\obj\Debug\serialGenaratorGUI.csproj.GenerateResource.cache

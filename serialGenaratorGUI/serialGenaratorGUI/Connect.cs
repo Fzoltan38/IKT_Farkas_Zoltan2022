@@ -35,7 +35,7 @@ namespace serialGenerator
             try
             {
                 connection.Open();
-                MessageBox.Show("Sikeres csatlakozás!");
+                //MessageBox.Show("Sikeres csatlakozás!");
             
             }
             catch (Exception e)
