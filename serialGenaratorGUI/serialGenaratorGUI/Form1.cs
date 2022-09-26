@@ -23,7 +23,7 @@ namespace serialGenaratorGUI
        
         private void button1_Click(object sender, EventArgs e)
         {
-                 
+            q.dbCreate(textBox1,textBox2);        
         }
     }
 }

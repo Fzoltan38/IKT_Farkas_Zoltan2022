@@ -29,6 +29,17 @@ namespace serialGenaratorGUI
             dr.Close();
         }
 
-       
+        public void dbCreate(TextBox textbox1, TextBox textbox2)
+        {
+
+            string qry = "INSERT INTO `serial`(`razon`, `active`) " +
+                         "VALUES ('"+textbox1.Text+"','"+textbox2.Text+"');";
+
+            MySqlCommand cmd = new MySqlCommand(qry,c.connection);
+
+            cmd.ExecuteNonQuery();
+
+
+        }
     }
 }
