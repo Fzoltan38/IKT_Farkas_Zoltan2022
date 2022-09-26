@@ -23,7 +23,14 @@ namespace serialGenaratorGUI
        
         private void button1_Click(object sender, EventArgs e)
         {
-            q.dbCreate(textBox1,textBox2);        
+            q.dbCreate(textBox1,textBox2);
+            q.dbRead(listBox1);
+        }
+
+        private void listBox1_DoubleClick(object sender, EventArgs e)
+        {
+            q.dbDelete(listBox1, textBox3);
+            q.dbRead(listBox1);
         }
     }
 }

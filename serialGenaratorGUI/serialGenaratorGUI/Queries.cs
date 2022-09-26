@@ -15,6 +15,8 @@ namespace serialGenaratorGUI
         
         public void dbRead(ListBox listboxForm1)
         {
+            listboxForm1.Items.Clear();
+
             string qry = "SELECT `id`,`razon`,`active` FROM `serial`;";
 
             MySqlCommand cmd=new MySqlCommand(qry,c.connection);
@@ -40,6 +42,18 @@ namespace serialGenaratorGUI
             cmd.ExecuteNonQuery();
 
 
+        }
+
+        public void dbDelete(ListBox listboxForm1, TextBox textbox3)
+        {
+            /*textbox3.Text = listboxForm1.SelectedIndex.ToString();
+            MessageBox.Show(listboxForm1.Items[listboxForm1.SelectedIndex].ToString());*/
+            string[] split = listboxForm1.Items[listboxForm1.SelectedIndex].ToString().Split('-');
+            
+            string qry = "DELETE FROM serial WHERE id=" + split[0];
+            MySqlCommand cmd = new MySqlCommand(qry,c.connection);
+
+            cmd.ExecuteNonQuery();
         }
     }
 }
