@@ -31,16 +31,23 @@ namespace serialGenaratorGUI
             dr.Close();
         }
 
-        public void dbCreate(TextBox textbox1, TextBox textbox2)
+        public void dbCreate()
         {
+            Random rnd = new Random();
+         
+            try
+            {
+                string qry = "INSERT INTO `serial`(`razon`, `active`) " +
+                       "VALUES ('"+ rnd.Next(100000, 10000000).ToString() + "', 1);";
 
-            string qry = "INSERT INTO `serial`(`razon`, `active`) " +
-                         "VALUES ('"+textbox1.Text+"','"+textbox2.Text+"');";
+                MySqlCommand cmd = new MySqlCommand(qry, c.connection);
 
-            MySqlCommand cmd = new MySqlCommand(qry,c.connection);
-
-            cmd.ExecuteNonQuery();
-
+                cmd.ExecuteNonQuery();
+            }
+            catch 
+            {
+                dbCreate();
+            }
 
         }
 
