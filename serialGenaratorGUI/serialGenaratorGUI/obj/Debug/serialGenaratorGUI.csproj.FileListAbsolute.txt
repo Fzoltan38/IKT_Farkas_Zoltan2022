@@ -32,3 +32,10 @@ C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI
 C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\obj\Debug\serialGenaratorGUI.csproj.CopyComplete
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\obj\Debug\serialGenaratorGUI.csproj.SuggestedBindingRedirects.cache
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\PdfSharp.Charting.dll
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\PdfSharp.dll
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\PdfSharp.xml
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\PdfSharp.Charting.xml
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\de\PdfSharp.Charting.resources.dll
