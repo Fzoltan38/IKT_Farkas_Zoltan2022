@@ -11,35 +11,79 @@ namespace Payment_wcf
 {
     public class Service1 : IService1
     {
-        List<Customer> cust = new List<Customer>();
-        public Customer getCustomer()
+        static List<Customer> cust = new List<Customer>();
+        public Customer getCustomer(string id)
         {
-            cust.Add(new Customer());
-            return cust[0];
+            int identity = 0;
+            for (int i = 0; i < cust.Count; i++)
+            {
+             
+                if (cust[i].Id == int.Parse(id))
+                {
+                    identity = i;
+                }
+            }
+
+            return cust[identity];
         }
 
-        public void feltolt()
+        public List<Customer> getCustomers()
+        {
+            return cust;
+        }
+
+        public Customer postCustomer(string id, string name, string city)
         {
             Customer c = new Customer();
-
-            c.Id = 2;
-            c.Name = "Gábor";
-            c.City = "Pécs";
+            c.Id = int.Parse(id);
+            c.Name = name;
+            c.City = city;
 
             cust.Add(c);
 
-            Customer c2 = new Customer();
-
-            c2.Id = 3;
-            c2.Name = "Péter";
-            c2.City = "Miskolc";
-
-            cust.Add(c2);
+            return c;
         }
-        public List<Customer> getCustomers()
+
+        public Customer postCustomerPostman(Customer customer)
         {
-            feltolt();
-            return cust;
+  
+            cust.Add(customer);
+            return customer;
+        }
+
+        public string deleteCustomer(string id)
+        {
+            int identity = 0;
+            for (int i = 0; i < cust.Count; i++)
+            {
+
+                if (cust[i].Id == int.Parse(id))
+                {
+                    identity = i;
+                    break;
+                }
+
+
+            }
+            cust.RemoveAt(identity);
+            return "Felhasználó törölve!";
+        }
+        public Customer putCustomer(string id, string name, string city)
+        {
+            int identity = 0;
+            for (int i = 0; i < cust.Count; i++)
+            {
+
+                if (cust[i].Id == int.Parse(id))
+                {
+                    identity = i;
+                }
+            }
+
+            cust[identity].Name = name;
+            cust[identity].City = city;
+
+            return cust[identity];
         }
     }
 }
