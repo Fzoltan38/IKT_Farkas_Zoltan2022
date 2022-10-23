@@ -31,7 +31,11 @@ namespace serialGenaratorGUI
             try
             {
                 connection.Open();
+<<<<<<< HEAD
                 textboxForm1.Text = "Sikeres csatlakozás!";
+=======
+                //MessageBox.Show("Sikeres csatlakozás!");
+>>>>>>> d63132ac99e1ce495261330bc901f1413f5e897d
             
             }
             catch (Exception e)

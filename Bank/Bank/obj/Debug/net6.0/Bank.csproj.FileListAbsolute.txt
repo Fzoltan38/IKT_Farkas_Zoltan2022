@@ -1,0 +1,15 @@
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\Bank\Bank\bin\Debug\net6.0\Bank.exe
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\Bank\Bank\bin\Debug\net6.0\Bank.deps.json
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\Bank\Bank\bin\Debug\net6.0\Bank.runtimeconfig.json
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\Bank\Bank\bin\Debug\net6.0\Bank.dll
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\Bank\Bank\bin\Debug\net6.0\ref\Bank.dll
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\Bank\Bank\bin\Debug\net6.0\Bank.pdb
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\Bank\Bank\obj\Debug\net6.0\Bank.csproj.AssemblyReference.cache
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\Bank\Bank\obj\Debug\net6.0\Bank.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\Bank\Bank\obj\Debug\net6.0\Bank.AssemblyInfoInputs.cache
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\Bank\Bank\obj\Debug\net6.0\Bank.AssemblyInfo.cs
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\Bank\Bank\obj\Debug\net6.0\Bank.csproj.CoreCompileInputs.cache
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\Bank\Bank\obj\Debug\net6.0\Bank.dll
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\Bank\Bank\obj\Debug\net6.0\ref\Bank.dll
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\Bank\Bank\obj\Debug\net6.0\Bank.pdb
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\Bank\Bank\obj\Debug\net6.0\Bank.genruntimeconfig.cache
