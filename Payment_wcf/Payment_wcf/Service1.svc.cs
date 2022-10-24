@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -11,78 +12,109 @@ namespace Payment_wcf
 {
     public class Service1 : IService1
     {
-        static List<Customer> cust = new List<Customer>();
-        public Customer getCustomer(string id)
+        Connect c = new Connect();
+        List<Customer> cust = new List<Customer>();
+        public List<Customer> getCustomers()//*Ok
         {
-            int identity = 0;
-            for (int i = 0; i < cust.Count; i++)
+            string qry = "SELECT `id`,`name`,`age`, city FROM `customer`;";
+
+            MySqlCommand cmd = new MySqlCommand(qry, c.connection);
+
+            MySqlDataReader dr = cmd.ExecuteReader();
+
+            while (dr.Read())
             {
-             
-                if (cust[i].Id == int.Parse(id))
-                {
-                    identity = i;
-                }
+                Customer customer = new Customer();
+                
+                customer.Id = int.Parse(dr.GetValue(0).ToString());
+                customer.Name = dr.GetValue(1).ToString();
+                customer.Age = int.Parse(dr.GetValue(2).ToString());
+                customer.City = dr.GetValue(3).ToString();
+
+                cust.Add(customer);
             }
 
-            return cust[identity];
-        }
-
-        public List<Customer> getCustomers()
-        {
+            dr.Close();
             return cust;
-        }
-
-        public Customer postCustomer(string id, string name, string city)
+        }      
+        public Customer getCustomer(string id)
         {
-            Customer c = new Customer();
-            c.Id = int.Parse(id);
-            c.Name = name;
-            c.City = city;
+          
+            string qry = "SELECT `id`,`name`,`age`, city FROM `customer` WHERE id="+id+";";
 
-            cust.Add(c);
+            MySqlCommand cmd = new MySqlCommand(qry, c.connection);
 
-            return c;
-        }
+            MySqlDataReader dr = cmd.ExecuteReader();
 
-        public Customer postCustomerPostman(Customer customer)
-        {
-  
-            cust.Add(customer);
+            dr.Read();
+            
+                Customer customer = new Customer();
+
+                customer.Id = int.Parse(dr.GetValue(0).ToString());
+                customer.Name = dr.GetValue(1).ToString();
+                customer.Age = int.Parse(dr.GetValue(2).ToString());
+                customer.City = dr.GetValue(3).ToString();
+            
+
+            dr.Close();
             return customer;
         }
 
-        public string deleteCustomer(string id)
+        public string deleteCustomer(string id)//*Ok
         {
-            int identity = 0;
-            for (int i = 0; i < cust.Count; i++)
+            try
             {
+                string qry = "DELETE FROM customer WHERE id=" + id;
+                MySqlCommand cmd = new MySqlCommand(qry, c.connection);
 
-                if (cust[i].Id == int.Parse(id))
-                {
-                    identity = i;
-                    break;
-                }
+                cmd.ExecuteNonQuery();
 
+                return "Felhasználó törölve!";
             }
-            cust.RemoveAt(identity);
-            return "Felhasználó törölve!";
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+
         }
-        public Customer putCustomer(string id, string name, string city)
+
+        public string postCustomer(string id, string name, string age, string city)//*Ok
         {
-            int identity = 0;
-            for (int i = 0; i < cust.Count; i++)
+            try
+            {
+                string qry = "UPDATE `customer` SET `Name`='" + name + "',`Age`='" + age + "',`City`='" + city + "' WHERE Id=" + id;
+
+                MySqlCommand cmd = new MySqlCommand(qry, c.connection);
+
+                cmd.ExecuteNonQuery();
+
+                return "Módosítás elvégezve!";
+            }
+            catch (Exception e)
             {
 
-                if (cust[i].Id == int.Parse(id))
-                {
-                    identity = i;
-                }
+                return e.Message;
             }
+        }
 
-            cust[identity].Name = name;
-            cust[identity].City = city;
+        public string putCustomerPostman(Customer customer)//*Ok
+        {
+             try
+            {
+                string qry = "INSERT INTO `customer`(`name`, `age`, `city`) " +
+                     "VALUES ('" + customer.Name + "'," + customer.Age + ",'" + customer.City + "');";
 
-            return cust[identity];
+                MySqlCommand cmd = new MySqlCommand(qry, c.connection);
+
+                cmd.ExecuteNonQuery();
+
+                return "Felhasználó sikeresen hozzáadva!";
+            }
+            catch (Exception e)
+            {
+
+                return e.Message;
+            }
         }
     }
 }

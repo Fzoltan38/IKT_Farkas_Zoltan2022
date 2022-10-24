@@ -11,10 +11,13 @@ namespace Payment_wcf
     {
         [DataMember]
         public int Id { get; set; }
-        
+
         [DataMember]
         public string Name { get; set; }
-        
+
+        [DataMember]
+        public int Age { get; set; }
+
         [DataMember]
         public string City {get; set;}
 
