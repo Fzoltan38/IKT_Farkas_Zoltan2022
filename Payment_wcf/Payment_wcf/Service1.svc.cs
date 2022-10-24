@@ -63,7 +63,6 @@ namespace Payment_wcf
                     break;
                 }
 
-
             }
             cust.RemoveAt(identity);
             return "Felhasználó törölve!";
