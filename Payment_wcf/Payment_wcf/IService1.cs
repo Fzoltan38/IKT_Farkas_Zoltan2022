@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
+﻿using System.Collections.Generic;
 using System.ServiceModel;
 using System.ServiceModel.Web;
-using System.Text;
 
 namespace Payment_wcf
 {
@@ -46,9 +42,9 @@ namespace Payment_wcf
            RequestFormat = WebMessageFormat.Json,
            ResponseFormat = WebMessageFormat.Json,
            BodyStyle = WebMessageBodyStyle.WrappedResponse,
-           UriTemplate = "putCustomerPostman")
+           UriTemplate = "putCustomer")
            ]
-        string putCustomerPostman(Customer customer);
+        string putCustomer(Customer customer);
 
         [OperationContract]//*OK
         [WebInvoke(Method = "DELETE",

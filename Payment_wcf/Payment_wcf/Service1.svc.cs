@@ -1,12 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.ServiceModel.Web;
-using System.Text;
-using System.Xml.Linq;
 
 namespace Payment_wcf
 {
@@ -14,50 +8,73 @@ namespace Payment_wcf
     {
         Connect c = new Connect();
         List<Customer> cust = new List<Customer>();
-        public List<Customer> getCustomers()//*Ok
+        public List<Customer> getCustomers()
         {
-            string qry = "SELECT `id`,`name`,`age`, city FROM `customer`;";
-
-            MySqlCommand cmd = new MySqlCommand(qry, c.connection);
-
-            MySqlDataReader dr = cmd.ExecuteReader();
-
-            while (dr.Read())
+            try
             {
-                Customer customer = new Customer();
-                
-                customer.Id = int.Parse(dr.GetValue(0).ToString());
-                customer.Name = dr.GetValue(1).ToString();
-                customer.Age = int.Parse(dr.GetValue(2).ToString());
-                customer.City = dr.GetValue(3).ToString();
+                string qry = "SELECT * FROM `customer`;";
 
-                cust.Add(customer);
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = c.connection;
+                cmd.CommandText = qry;
+
+                MySqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    Customer customer = new Customer();
+
+                    customer.Id = dr.GetInt32(0);
+                    customer.Name = dr.GetString(1);
+                    customer.Age = dr.GetInt32(2);
+                    customer.City = dr.GetString(3);
+
+                    cust.Add(customer);
+                }
+
+                dr.Close();
+                return cust;
             }
+            catch (Exception)
+            {
 
-            dr.Close();
-            return cust;
+                throw;
+            }
+           
         }      
         public Customer getCustomer(string id)
         {
-          
-            string qry = "SELECT `id`,`name`,`age`, city FROM `customer` WHERE id="+id+";";
 
-            MySqlCommand cmd = new MySqlCommand(qry, c.connection);
+            try
+            {
+                string qry = "SELECT * FROM `customer` WHERE id=@id";
 
-            MySqlDataReader dr = cmd.ExecuteReader();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = c.connection;
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.CommandText = qry;
 
-            dr.Read();
-            
+                MySqlDataReader dr = cmd.ExecuteReader();
+
+                dr.Read();
+
                 Customer customer = new Customer();
 
-                customer.Id = int.Parse(dr.GetValue(0).ToString());
-                customer.Name = dr.GetValue(1).ToString();
-                customer.Age = int.Parse(dr.GetValue(2).ToString());
-                customer.City = dr.GetValue(3).ToString();
-            
+                customer.Id = dr.GetInt32(0);
+                customer.Name = dr.GetString(1);
+                customer.Age = dr.GetInt32(2);
+                customer.City = dr.GetString(3);
 
-            dr.Close();
-            return customer;
+
+                dr.Close();
+                return customer;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+           
         }
 
         public string deleteCustomer(string id)//*Ok
@@ -82,9 +99,15 @@ namespace Payment_wcf
         {
             try
             {
-                string qry = "UPDATE `customer` SET `Name`='" + name + "',`Age`='" + age + "',`City`='" + city + "' WHERE Id=" + id;
+                string qry = "UPDATE `customer` SET `Name`=@name,`Age`=@age,`City`=@city WHERE Id=@id;";
 
-                MySqlCommand cmd = new MySqlCommand(qry, c.connection);
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = c.connection;
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Parameters.AddWithValue("@name", name);
+                cmd.Parameters.AddWithValue("@age", age);
+                cmd.Parameters.AddWithValue("@city", city);
+                cmd.CommandText = qry;
 
                 cmd.ExecuteNonQuery();
 
@@ -97,22 +120,25 @@ namespace Payment_wcf
             }
         }
 
-        public string putCustomerPostman(Customer customer)//*Ok
+        public string putCustomer(Customer customer)//*Ok
         {
              try
             {
                 string qry = "INSERT INTO `customer`(`name`, `age`, `city`) " +
-                     "VALUES ('" + customer.Name + "'," + customer.Age + ",'" + customer.City + "');";
+                    "VALUES (@name, @age, @city);";
 
-                MySqlCommand cmd = new MySqlCommand(qry, c.connection);
-
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = c.connection;
+                cmd.Parameters.AddWithValue("@name", customer.Name);
+                cmd.Parameters.AddWithValue("@age", customer.Age);
+                cmd.Parameters.AddWithValue("@city", customer.City);
+                cmd.CommandText = qry;
                 cmd.ExecuteNonQuery();
 
                 return "Felhasználó sikeresen hozzáadva!";
             }
             catch (Exception e)
             {
-
                 return e.Message;
             }
         }

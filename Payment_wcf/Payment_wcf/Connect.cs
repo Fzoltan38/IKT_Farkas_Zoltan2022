@@ -1,9 +1,4 @@
 ﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
 
 namespace Payment_wcf
 {
@@ -30,16 +25,8 @@ namespace Payment_wcf
 
             connection = new MySqlConnection(connectionstring);
 
-            try
-            {
-                connection.Open();
-                //MessageBox.Show("Sikeres csatlakozás!");
+            connection.Open();
 
-            }
-            catch
-            {
-                
-            }
         }
     }
 }
