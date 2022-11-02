@@ -10,9 +10,7 @@ namespace Payment_wcf
         List<Customer> cust = new List<Customer>();
         public List<Customer> getCustomers()
         {
-            try
-            {
-                string qry = "SELECT * FROM `customer`;";
+                string qry = "SELECT * FROM customer";
 
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = c.connection;
@@ -26,22 +24,15 @@ namespace Payment_wcf
 
                     customer.Id = dr.GetInt32(0);
                     customer.Name = dr.GetString(1);
-                    customer.Age = dr.GetInt32(2);
-                    customer.City = dr.GetString(3);
+                    customer.City = dr.GetString(2);
+                    customer.Age = dr.GetInt32(3);
 
                     cust.Add(customer);
                 }
 
-                dr.Close();
                 return cust;
-            }
-            catch (Exception)
-            {
 
-                throw;
-            }
-           
-        }      
+        } 
         public Customer getCustomer(string id)
         {
 
@@ -62,8 +53,8 @@ namespace Payment_wcf
 
                 customer.Id = dr.GetInt32(0);
                 customer.Name = dr.GetString(1);
-                customer.Age = dr.GetInt32(2);
-                customer.City = dr.GetString(3);
+                customer.City = dr.GetString(2);
+                customer.Age = dr.GetInt32(3);
 
 
                 dr.Close();
