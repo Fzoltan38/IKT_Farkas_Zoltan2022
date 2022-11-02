@@ -32,6 +32,43 @@ C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI
 C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\obj\Debug\serialGenaratorGUI.csproj.CopyComplete
+<<<<<<< HEAD
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\serialGenaratorGUI.exe.config
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\serialGenaratorGUI.exe
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\serialGenaratorGUI.pdb
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\BouncyCastle.Crypto.dll
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\Google.Protobuf.dll
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\K4os.Compression.LZ4.dll
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\K4os.Hash.xxHash.dll
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\MySql.Data.dll
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\System.Buffers.dll
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\System.Memory.dll
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\System.Numerics.Vectors.dll
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\Ubiety.Dns.Core.dll
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\ZstdNet.dll
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\BouncyCastle.Crypto.xml
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\Google.Protobuf.pdb
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\Google.Protobuf.xml
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\K4os.Compression.LZ4.xml
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\K4os.Hash.xxHash.xml
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\MySql.Data.xml
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\System.Buffers.xml
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\System.Memory.xml
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\System.Numerics.Vectors.xml
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\obj\Debug\serialGenaratorGUI.csproj.AssemblyReference.cache
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\obj\Debug\serialGenaratorGUI.csproj.SuggestedBindingRedirects.cache
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\obj\Debug\serialGenaratorGUI.Form1.resources
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\obj\Debug\serialGenaratorGUI.Properties.Resources.resources
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\obj\Debug\serialGenaratorGUI.csproj.GenerateResource.cache
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\obj\Debug\serialGenaratorGUI.csproj.CoreCompileInputs.cache
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\obj\Debug\serialGenaratorGUI.csproj.CopyComplete
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\obj\Debug\serialGenaratorGUI.exe
+D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\obj\Debug\serialGenaratorGUI.pdb
+=======
 C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\obj\Debug\serialGenaratorGUI.csproj.SuggestedBindingRedirects.cache
 C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\PdfSharp.Charting.dll
 C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\PdfSharp.dll
@@ -39,6 +76,7 @@ C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI
 C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\PdfSharp.Charting.xml
 C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\de\PdfSharp.resources.dll
 C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\de\PdfSharp.Charting.resources.dll
+<<<<<<< HEAD
 D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\serialGenaratorGUI.exe.config
 D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\serialGenaratorGUI.exe
 D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\bin\Debug\serialGenaratorGUI.pdb
@@ -80,3 +118,6 @@ D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\obj\Debug\ser
 D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\obj\Debug\serialGenaratorGUI.csproj.CopyComplete
 D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\obj\Debug\serialGenaratorGUI.exe
 D:\Git\IKT_Farkas_Zoltan2022\serialGenaratorGUI\serialGenaratorGUI\obj\Debug\serialGenaratorGUI.pdb
+=======
+>>>>>>> d63132ac99e1ce495261330bc901f1413f5e897d
+>>>>>>> 280e55a4d445c10f937c06cac08c620f9595ee69

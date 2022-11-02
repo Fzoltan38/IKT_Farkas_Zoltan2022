@@ -5,17 +5,28 @@ namespace serialGenaratorGUI
 {
     public partial class Form1 : Form
     {
+<<<<<<< HEAD
+
+        public Form1()
+        {
+            InitializeComponent();
+           
+=======
         Queries q = new Queries();
         Printing p = new Printing();
         public Form1()
         {
             InitializeComponent();
             q.dbRead(listBox1);
+>>>>>>> d63132ac99e1ce495261330bc901f1413f5e897d
         }
-
-       
         private void button1_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+            Connect c = new Connect(textBox1);
+            Queries q = new Queries();
+            q.dbRead(listBox1);
+=======
             /*q.dbCreate(textBox1,textBox2);
             q.dbRead(listBox1);*/
 
@@ -49,6 +60,7 @@ namespace serialGenaratorGUI
         private void button3_Click(object sender, EventArgs e)
         {
             p.doPdf(listBox1);
+>>>>>>> d63132ac99e1ce495261330bc901f1413f5e897d
         }
     }
 }
