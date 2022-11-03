@@ -110,6 +110,7 @@
   <ItemGroup>
     <Compile Include="Connect.cs" />
     <Compile Include="Customer.cs" />
+    <Compile Include="Repositories\GET\IgetService.cs" />
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>
@@ -118,6 +119,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Repositories\DELETE\" />
+    <Folder Include="Repositories\POST\" />
+    <Folder Include="Repositories\PUT\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

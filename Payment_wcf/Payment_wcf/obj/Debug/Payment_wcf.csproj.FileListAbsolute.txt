@@ -31,4 +31,3 @@ C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\Payment_wcf\Payment_wcf\bin\System.Nu
 C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\Payment_wcf\Payment_wcf\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\Payment_wcf\Payment_wcf\bin\System.Threading.Tasks.Extensions.xml
 C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\Payment_wcf\Payment_wcf\obj\Debug\Payment_wcf.csproj.CopyComplete
-C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\Payment_wcf\Payment_wcf\obj\Debug\Payment_wcf.csproj.AssemblyReference.cache
