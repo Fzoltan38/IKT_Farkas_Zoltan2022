@@ -1,11 +1,10 @@
 ﻿using MySql.Data.MySqlClient;
-using Payment_wcf.Repositories.GET;
 using System;
 using System.Collections.Generic;
 
 namespace Payment_wcf
 {
-    public class Service1 : IService1, IGetService
+    public class Service1 : IService1
     {
         Connect c = new Connect();
         List<Customer> cust = new List<Customer>();
@@ -135,38 +134,5 @@ namespace Payment_wcf
             }
         }
 
-        public List<Customer> getCustomerss()
-        {
-            try
-            {
-                string qry = "SELECT * FROM `customer`;";
-
-                MySqlCommand cmd = new MySqlCommand();
-                cmd.Connection = c.connection;
-                cmd.CommandText = qry;
-
-                MySqlDataReader dr = cmd.ExecuteReader();
-
-                while (dr.Read())
-                {
-                    Customer customer = new Customer();
-
-                    customer.Id = dr.GetInt32(0);
-                    customer.Name = dr.GetString(1);
-                    customer.Age = dr.GetInt32(2);
-                    customer.City = dr.GetString(3);
-
-                    cust.Add(customer);
-                }
-
-                dr.Close();
-                return cust;
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
     }
 }
