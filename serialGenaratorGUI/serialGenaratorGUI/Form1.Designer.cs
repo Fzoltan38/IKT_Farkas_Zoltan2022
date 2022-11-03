@@ -31,17 +31,27 @@
             this.button1 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+<<<<<<< HEAD
+=======
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+>>>>>>> d63132ac99e1ce495261330bc901f1413f5e897d
             this.SuspendLayout();
             // 
             // button1
             // 
+<<<<<<< HEAD
+            this.button1.Location = new System.Drawing.Point(537, 38);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(209, 54);
+=======
             this.button1.Location = new System.Drawing.Point(37, 112);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(233, 54);
+>>>>>>> d63132ac99e1ce495261330bc901f1413f5e897d
             this.button1.TabIndex = 0;
             this.button1.Text = "Módosítás";
             this.button1.UseVisualStyleBackColor = true;
@@ -51,10 +61,17 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
+<<<<<<< HEAD
+            this.listBox1.Location = new System.Drawing.Point(23, 38);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(506, 260);
+=======
             this.listBox1.Location = new System.Drawing.Point(311, 15);
             this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(341, 292);
+>>>>>>> d63132ac99e1ce495261330bc901f1413f5e897d
             this.listBox1.TabIndex = 1;
             this.listBox1.Click += new System.EventHandler(this.listBox1_Click);
             this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
@@ -97,11 +114,25 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(536, 112);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(210, 22);
+            this.textBox1.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+<<<<<<< HEAD
+            this.ClientSize = new System.Drawing.Size(917, 526);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(4);
+=======
             this.ClientSize = new System.Drawing.Size(684, 482);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -110,6 +141,7 @@
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> d63132ac99e1ce495261330bc901f1413f5e897d
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -122,9 +154,12 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TextBox textBox1;
+<<<<<<< HEAD
+=======
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+>>>>>>> d63132ac99e1ce495261330bc901f1413f5e897d
     }
 }
 

@@ -21,7 +21,7 @@ namespace Payment_wcf
         [WebInvoke(Method = "GET",
            RequestFormat = WebMessageFormat.Json,
            ResponseFormat = WebMessageFormat.Json,
-           BodyStyle = WebMessageBodyStyle.WrappedResponse,
+           BodyStyle = WebMessageBodyStyle.Bare,
            UriTemplate = "getCustomers")
            ]
         List<Customer> getCustomers();
