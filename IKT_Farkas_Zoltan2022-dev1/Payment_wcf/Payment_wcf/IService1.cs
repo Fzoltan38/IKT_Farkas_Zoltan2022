@@ -9,7 +9,7 @@ namespace Payment_wcf
     {
 
         [OperationContract]
-        [WebInvoke(Method = "POST",
+        [WebInvoke(Method = "*",
             RequestFormat = WebMessageFormat.Json,
             ResponseFormat = WebMessageFormat.Json,
             BodyStyle = WebMessageBodyStyle.WrappedResponse,
@@ -18,7 +18,7 @@ namespace Payment_wcf
         Customer getCustomer(string id);
 
         [OperationContract]//*Ok
-        [WebInvoke(Method = "GET",
+        [WebInvoke(Method = "*",
            RequestFormat = WebMessageFormat.Json,
            ResponseFormat = WebMessageFormat.Json,
            BodyStyle = WebMessageBodyStyle.Bare,
@@ -27,7 +27,7 @@ namespace Payment_wcf
         List<Customer> getCustomers();
 
         [OperationContract]//*Ok
-        [WebInvoke(Method = "POST",
+        [WebInvoke(Method = "*",
            RequestFormat = WebMessageFormat.Json,
            ResponseFormat = WebMessageFormat.Json,
            BodyStyle = WebMessageBodyStyle.WrappedResponse,
@@ -38,7 +38,7 @@ namespace Payment_wcf
 
 
         [OperationContract]//*Ok
-        [WebInvoke(Method = "PUT",
+        [WebInvoke(Method = "*",
            RequestFormat = WebMessageFormat.Json,
            ResponseFormat = WebMessageFormat.Json,
            BodyStyle = WebMessageBodyStyle.WrappedResponse,
@@ -47,7 +47,7 @@ namespace Payment_wcf
         string putCustomer(Customer customer);
 
         [OperationContract]//*OK
-        [WebInvoke(Method = "DELETE",
+        [WebInvoke(Method = "*",
           RequestFormat = WebMessageFormat.Json,
           ResponseFormat = WebMessageFormat.Json,
           BodyStyle = WebMessageBodyStyle.WrappedResponse,

@@ -1,3 +1,14 @@
+document.getElementById('button2').onclick=function (){
+    var delNumber=document.getElementById('number2').value;
+    delCustomer(delNumber)
+}
+
+async function delCustomer(delNumber){
+
+    var url='http://localhost:60227/Service1.svc/deltecustomer/'+delNumber;
+    var 
+}
+
 document.getElementById('form1').onsubmit=function (event){
   
     event.preventDefault();
@@ -5,26 +16,37 @@ document.getElementById('form1').onsubmit=function (event){
     var kor=event.target.elements.kor.value;
     var varos=event.target.elements.varos.value;
 
-    var body=JSON.stringify({
+    var bodyCustomer=JSON.stringify({
       Name: nev,
       Age: kor,
       City: varos
     });
 
-    putCustomer(body);
+    putCustomer(bodyCustomer);
 }
 
 
-async function putCustomer(){
+async function putCustomer(bodyCustomer){
    
     var url='http://localhost:60227/Service1.svc/putcustomer';
     var putUser=await fetch(url,{
-        method: "PUT",
-        body: body,
+        method: "POST",
+        body: bodyCustomer,
         headers: {
             'Content-Type': 'application/json'
         }
     })
+
+    if(!putUser.ok){
+        alert("POST végpont hiba!");
+        return;
+    }
+
+    var httpMessage=await putUser.json();
+
+    alert(httpMessage);
+
+    getCustomers();
 } 
 
 async function getCustomers(){
@@ -33,7 +55,7 @@ async function getCustomers(){
     var userList = await fetch(url); 
 
     if(!userList.ok){
-        alert("Végpont hiba!");
+        alert("GET végpont hiba!");
         return;
     }
 

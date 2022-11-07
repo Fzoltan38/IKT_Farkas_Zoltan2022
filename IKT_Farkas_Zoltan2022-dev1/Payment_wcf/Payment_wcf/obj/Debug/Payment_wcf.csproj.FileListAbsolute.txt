@@ -99,3 +99,4 @@ C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\IKT_Farkas_Zoltan2022-dev1\Payment_wc
 C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\IKT_Farkas_Zoltan2022-dev1\Payment_wcf\Payment_wcf\obj\Debug\Payment_wcf.csproj.CopyComplete
 C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\IKT_Farkas_Zoltan2022-dev1\Payment_wcf\Payment_wcf\obj\Debug\Payment_wcf.dll
 C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\IKT_Farkas_Zoltan2022-dev1\Payment_wcf\Payment_wcf\obj\Debug\Payment_wcf.pdb
+C:\Users\farkasz\Git\IKT_Farkas_Zoltan2022\IKT_Farkas_Zoltan2022-dev1\Payment_wcf\Payment_wcf\obj\Debug\Payment_wcf.csproj.AssemblyReference.cache
