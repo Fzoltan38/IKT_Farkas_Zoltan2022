@@ -5,8 +5,26 @@ document.getElementById('button2').onclick=function (){
 
 async function delCustomer(delNumber){
 
-    var url='http://localhost:60227/Service1.svc/deltecustomer/'+delNumber;
-    var 
+    var url='http://localhost:60227/Service1.svc/deletecustomer/'+delNumber;
+    
+    var delFetch=await fetch(url,{
+        method: "DELETE",
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+
+    if(!delFetch.ok){
+        alert("DELETE végpont hiba!");
+        return;
+    }
+
+    var httpMessage=await delFetch.json();
+
+    //alert(httpMessage);
+
+    getCustomers();
+
 }
 
 document.getElementById('form1').onsubmit=function (event){
