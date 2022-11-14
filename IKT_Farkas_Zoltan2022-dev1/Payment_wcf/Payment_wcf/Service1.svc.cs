@@ -134,5 +134,30 @@ namespace Payment_wcf
                 return e.Message;
             }
         }
+
+        public string postCustomerBody(Customer cust)
+        {
+            try
+            {
+                string qry = "UPDATE `customer` SET `Name`=@name,`Age`=@age,`City`=@city WHERE Id=@id;";
+
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = c.connection;
+                cmd.Parameters.AddWithValue("@id", cust.Id);
+                cmd.Parameters.AddWithValue("@name", cust.Name);
+                cmd.Parameters.AddWithValue("@age", cust.Age);
+                cmd.Parameters.AddWithValue("@city", cust.City);
+                cmd.CommandText = qry;
+
+                cmd.ExecuteNonQuery();
+
+                return "Módosítás elvégezve!";
+            }
+            catch (Exception e)
+            {
+
+                return e.Message;
+            }
+        }
     }
 }

@@ -1,49 +1,97 @@
-document.getElementById('button2').onclick=function (){
-    var delNumber=document.getElementById('number2').value;
-    delCustomer(delNumber)
+var state = false;
+
+document.getElementById("stateButton").onclick = function (){
+    if(state){
+        state=!state;
+        document.getElementById('idField').innerHTML="";
+    }
+    else{
+        state=!state;
+        var contentText=`
+        ID: <input type='number' id='idNumber'><br>
+        `;
+        document.getElementById('idField').innerHTML=contentText;     
+    }
 }
 
-async function delCustomer(delNumber){
+document.getElementById('forms').onsubmit =function (event){
+    event.preventDefault();
+    var nev=event.target.elements.nev.value;
+    var varos=event.target.elements.varos.value;
+    var kor=event.target.elements.kor.value;
 
-    var url='http://localhost:60227/Service1.svc/deletecustomer/'+delNumber;
-    
-    var delFetch=await fetch(url,{
-        method: "DELETE",
-        headers: {
-            'Content-Type': 'application/json'
+    if(!state){
+        let bodyCustomer=JSON.stringify({
+            Name: nev,
+            Age: kor,
+            City: varos
+          });
+          
+        putCustomer(bodyCustomer);
+    }
+    else{     
+        let azon=event.target.elements.idNumber.value;
+        let bodyyCustomer=JSON.stringify({
+            Id: azon,
+            Name: nev,
+            Age: kor,
+            City: varos
+          });
+        
+        updateCustomer(bodyyCustomer);
+    }
+}
+
+document.getElementById('button2').onclick = function(){
+    id=document.getElementById('number2').value;
+    deletCustomer(id);
+   
+}
+
+async function deletCustomer(id){
+    var url='http://localhost:60227/Service1.svc/deletecustomer/'+id;
+    var delUser=await fetch(url,{
+        method : "DELETE",
+        headers : {
+            'Content-type': 'application/json'
         }
     });
-
-    if(!delFetch.ok){
-        alert("DELETE végpont hiba!");
+    
+    if(!delUser.ok){
+        alert("Delete hiba!");
         return;
     }
 
-    var httpMessage=await delFetch.json();
+    var httpMessage=await delUser.json();
 
-    //alert(httpMessage);
+    alert(httpMessage);
+
+    getCustomers();
+}
+async function updateCustomer(bodyCustomer){
+    
+    var url='http://localhost:60227/Service1.svc/postcustomerbody';
+    var upUser=await fetch(url,{
+        method: "POST",
+        body: bodyCustomer,
+        headers:{
+            'Content-type':'application/json'
+        }
+
+    });
+
+    if(!upUser.ok){
+        alert("Update hiba!");
+        return;
+    }
+
+    var upResult=await upUser.json();
+
+    alert(upResult);
 
     getCustomers();
 
 }
-
-document.getElementById('form1').onsubmit=function (event){
-  
-    event.preventDefault();
-    var nev=event.target.elements.nev.value;
-    var kor=event.target.elements.kor.value;
-    var varos=event.target.elements.varos.value;
-
-    var bodyCustomer=JSON.stringify({
-      Name: nev,
-      Age: kor,
-      City: varos
-    });
-
-    putCustomer(bodyCustomer);
-}
-
-
 async function putCustomer(bodyCustomer){
    
     var url='http://localhost:60227/Service1.svc/putcustomer';

@@ -12,7 +12,7 @@ namespace Payment_wcf
         [WebInvoke(Method = "*",
             RequestFormat = WebMessageFormat.Json,
             ResponseFormat = WebMessageFormat.Json,
-            BodyStyle = WebMessageBodyStyle.WrappedResponse,
+            BodyStyle = WebMessageBodyStyle.Bare,
             UriTemplate = "getCustomer/{id}")
             ]
         Customer getCustomer(string id);
@@ -30,18 +30,28 @@ namespace Payment_wcf
         [WebInvoke(Method = "*",
            RequestFormat = WebMessageFormat.Json,
            ResponseFormat = WebMessageFormat.Json,
-           BodyStyle = WebMessageBodyStyle.WrappedResponse,
+           BodyStyle = WebMessageBodyStyle.Bare,
            UriTemplate = "postCustomer/{id}/{name}/{age}/{city}")
            ]
 
         string postCustomer(string id, string name, string age, string city);
+
+        [OperationContract]//*Ok
+        [WebInvoke(Method = "*",
+           RequestFormat = WebMessageFormat.Json,
+           ResponseFormat = WebMessageFormat.Json,
+           BodyStyle = WebMessageBodyStyle.Bare,
+           UriTemplate = "postCustomerBody")
+           ]
+
+        string postCustomerBody(Customer cust);
 
 
         [OperationContract]//*Ok
         [WebInvoke(Method = "*",
            RequestFormat = WebMessageFormat.Json,
            ResponseFormat = WebMessageFormat.Json,
-           BodyStyle = WebMessageBodyStyle.WrappedResponse,
+           BodyStyle = WebMessageBodyStyle.Bare,
            UriTemplate = "putCustomer")
            ]
         string putCustomer(Customer customer);
@@ -50,7 +60,7 @@ namespace Payment_wcf
         [WebInvoke(Method = "*",
           RequestFormat = WebMessageFormat.Json,
           ResponseFormat = WebMessageFormat.Json,
-          BodyStyle = WebMessageBodyStyle.WrappedResponse,
+          BodyStyle = WebMessageBodyStyle.Bare,
           UriTemplate = "deleteCustomer/{id}")
           ]
 
