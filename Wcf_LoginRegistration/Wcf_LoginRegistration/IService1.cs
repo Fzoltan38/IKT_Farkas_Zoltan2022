@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Runtime.Serialization;
 using System.ServiceModel;
-using System.ServiceModel.Channels;
 using System.ServiceModel.Web;
-using System.Text;
+
 
 namespace Wcf_LoginRegistration
 {
@@ -20,8 +17,8 @@ namespace Wcf_LoginRegistration
             RequestFormat = WebMessageFormat.Json,
             ResponseFormat = WebMessageFormat.Json,
             BodyStyle = WebMessageBodyStyle.Bare,
-            UriTemplate = "login")]
-        string login(User user);
+            UriTemplate = "loginCheck")]
+        bool loginCheck(User user);
 
       
     }
